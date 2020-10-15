@@ -1,7 +1,0 @@
-Abstract:
-
-Installation:
-
-Usage:
-
-Support:
