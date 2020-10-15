@@ -67,6 +67,9 @@ optional arguments:
                         Please provide a valid API Key
 /app # 
 ```
+# Security Measures:
+- Validation for a valid mac address is also taken care of in the code itselft.
+- The container is not exposing any ports since we don't have GUI for this tool.
 
 # Support:
 - gsukhatm@cisco.com
