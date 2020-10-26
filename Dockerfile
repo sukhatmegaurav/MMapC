@@ -4,3 +4,5 @@ RUN pip install requests
 # Add demo app
 COPY ./app /app
 WORKDIR /app
+
+ENTRYPOINT [ "python", "main.py"]
