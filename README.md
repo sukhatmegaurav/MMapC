@@ -30,31 +30,20 @@ gaurav@gaurav-VirtualBox:~/Desktop/MMapsC$
 docker build -t mmapc .
 ```
 
-3. Create a container out of it in deamon mode
-* Here, container name is 'gvscontainer'
-```
-docker run -d --rm --name gvscontainer mmapc
-```
-
 # Usage:
 
-1. Get into the alpine container
+1. Run the tool
 ```
-docker exec -it gvscontainer /bin/ash
-```
-
-2. Run the main.py file
-```
-python main.py [-mac MAC] [-apikey APIKEY]
+docker run --dns 8.8.8.8 mmapc [-mac MAC] [-apikey APIKEY]
 ```
 example: 
 ```
-python main.py -mac 44.38.39.ff.ef.57 -apikey at_0lsz0Ny9kHFc3oYVzQ7b7Z74NkwxB
+docker run --dns 8.8.8.8 mmapc -mac 44.38.39.ff.ef.57 -apikey at_olrz0Ny9kHhc3oYVzQ7b7Z74NkwfD
 ```
 
 Or execute help argument
 ```
-/app # python main.py -h
+/app # docker run mmapc -h
 usage: main.py [-h] [-mac MAC] [-apikey APIKEY]
 
 Take MAC Address as input, API Key as well if required
